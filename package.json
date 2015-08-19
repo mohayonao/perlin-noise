@@ -1,7 +1,7 @@
 {
   "name": "@mohayonao/perlin-noise",
-  "description": "simple perlin noise generator",
-  "version": "0.0.0",
+  "description": "simple 1d perlin noise generator",
+  "version": "0.1.0",
   "author": "mohayonao <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/perlin-noise/issues"
