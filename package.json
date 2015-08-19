@@ -7,7 +7,15 @@
     "url": "https://github.com/mohayonao/perlin-noise/issues"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-eslint": "^4.0.10",
+    "eslint": "^1.2.0",
+    "espower-babel": "^3.2.0",
+    "isparta": "^3.0.3",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0"
+  },
   "files": [
     "package.json",
     "README.md",
@@ -21,5 +29,13 @@
     "type": "git",
     "url": "https://github.com/mohayonao/perlin-noise.git"
   },
-  "scripts": {}
+  "scripts": {
+    "build": "npm run build-to5",
+    "build-to5": "babel src --out-dir lib",
+    "cover": "babel-node $(npm bin)/isparta cover --report text --report html _mocha",
+    "lint": "eslint src test",
+    "prepublish": "rm -rf lib && npm run lint && npm run test && npm run build-to5",
+    "test": "mocha --compilers js:espower-babel/guess",
+    "travis": "npm run lint && npm run test"
+  }
 }
