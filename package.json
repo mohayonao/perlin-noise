@@ -1,0 +1,25 @@
+{
+  "name": "@mohayonao/perlin-noise",
+  "description": "simple perlin noise generator",
+  "version": "0.0.0",
+  "author": "mohayonao <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/perlin-noise/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "package.json",
+    "README.md",
+    "index.js",
+    "lib"
+  ],
+  "homepage": "https://github.com/mohayonao/perlin-noise/",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/perlin-noise.git"
+  },
+  "scripts": {}
+}
