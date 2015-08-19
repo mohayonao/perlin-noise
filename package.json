@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@mohayonao/randgen": "^0.1.0",
     "babel": "^5.8.21",
     "babel-eslint": "^4.0.10",
     "eslint": "^1.2.0",
