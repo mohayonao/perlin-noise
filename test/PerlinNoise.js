@@ -8,18 +8,11 @@ function closeTo(expected, actual, delta) {
 
 describe("PerlinNoise", () => {
   describe("constructor(rand: function = Math.random)", () => {
-    it("works", () => {
-      let noise = new PerlinNoise();
-
-      assert(noise instanceof PerlinNoise);
-    });
-  });
-  describe(".createInstance(rand: function = Math.random): PerlinNoise", () => {
     it("works", (done) => {
-      let noise1 = PerlinNoise.createInstance(RandGen.createInstance(12345).random);
+      let noise1 = new PerlinNoise(new RandGen(12345).random);
 
       setTimeout(() => {
-        let noise2 = PerlinNoise.createInstance(RandGen.createInstance(12345).random);
+        let noise2 = new PerlinNoise(new RandGen(12345).random);
 
         assert(noise1 instanceof PerlinNoise);
         assert(noise2 instanceof PerlinNoise);
@@ -30,10 +23,10 @@ describe("PerlinNoise", () => {
       }, 10);
     });
     it("works without rand", (done) => {
-      let noise1 = PerlinNoise.createInstance();
+      let noise1 = new PerlinNoise();
 
       setTimeout(() => {
-        let noise2 = PerlinNoise.createInstance();
+        let noise2 = new PerlinNoise();
 
         assert(noise1 instanceof PerlinNoise);
         assert(noise2 instanceof PerlinNoise);
@@ -46,8 +39,8 @@ describe("PerlinNoise", () => {
   });
   describe("#noise(x: number): number", () => {
     it("works", () => {
-      let noise1 = new PerlinNoise(RandGen.createInstance(12345).random);
-      let noise2 = new PerlinNoise(RandGen.createInstance(12345).random);
+      let noise1 = new PerlinNoise(new RandGen(12345).random);
+      let noise2 = new PerlinNoise(new RandGen(12345).random);
 
       assert(closeTo(noise1.noise(0.01), 0.47971085, 1e-6));
       assert(closeTo(noise1.noise(0.02), 0.49198359, 1e-6));

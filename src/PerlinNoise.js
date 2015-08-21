@@ -37,8 +37,4 @@ export default class PerlinNoise {
 
     this.noise = noise;
   }
-
-  static createInstance(seed = Math.random) {
-    return new PerlinNoise(seed);
-  }
 }
