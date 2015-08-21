@@ -12,9 +12,8 @@ npm install @mohayonao/perlin-noise
 ```
 
 ## API
-
-#### Class methods
-- `createInstance(rand: function = Math.random): PerlinNoise`
+### PerlinNoise
+- `constructor(rand: function = Math.random)`
 
 #### Instance methods
 - `noise(x: number): number`
