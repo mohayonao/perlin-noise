@@ -1,14 +1,14 @@
 {
   "name": "@mohayonao/perlin-noise",
   "description": "simple 1d perlin noise generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "mohayonao <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/perlin-noise/issues"
   },
   "dependencies": {},
   "devDependencies": {
-    "@mohayonao/randgen": "^0.1.0",
+    "@mohayonao/randgen": "^0.2.0",
     "babel": "^5.8.21",
     "babel-eslint": "^4.0.10",
     "eslint": "^1.2.0",
